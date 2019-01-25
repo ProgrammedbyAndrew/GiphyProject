@@ -15,7 +15,7 @@ function createButtons(){
 		$('.display').empty();
 
 		var thisShow = $(this).data('name');
-		var giphyURL = "http://api.giphy.com/v1/gifs/search?q=cars+" + thisShow + "&limit=10&api_key=ZRdVbeXcaaXxwXNBSmY0BLMj6HuTSJ8H";
+		var giphyURL = "https://api.giphy.com/v1/gifs/search?q=cars+" + thisShow + "&limit=10&api_key=ZRdVbeXcaaXxwXNBSmY0BLMj6HuTSJ8H";
 		$.ajax({url: giphyURL, method: 'GET'}).done(function(giphy){
 			currentGif = giphy.data;
 			$.each(currentGif, function(index,value){
